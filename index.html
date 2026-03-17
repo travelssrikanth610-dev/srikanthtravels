@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Srikanth Car Travels - Shadanagar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    
+    <style>
+   
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1>Srikanth Car Travels</h1>
+                <span>Bhagyanagar Colony, Shadanagar</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#fleet">Cars</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="contact-info">
+                <a href="tel:9640091779" class="phone-number">
+                    <i class="fas fa-phone"></i> 9640091779
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Srikanth Car Travels</h1>
+            <p>Bhagyanagar Colony, Shadanagar • 24/7 Service</p>
+            
+            <!-- Pricing Info Bar -->
+            <div class="pricing-bar">
+                <i class="fas fa-tag"></i> Price: ₹1000 for first 150 km • <i class="fas fa-rupee-sign"></i>  ₹15/km after
+            </div>
+            
+            <div class="booking-form">
+                <h3>Book Your Ride</h3>
+                <input type="text" placeholder="Your Name" id="name">
+                <input type="tel" placeholder="Phone Number" id="phone">
+                
+                <div class="row">
+                    <div class="form-group">
+                        <input type="date" id="date">
+                    </div>
+                    <div class="form-group">
+                        <input type="time" id="time">
+                    </div>
+                </div>
+                
+                <input type="text" placeholder="Pickup Location" value="Bhagyanagar Colony, Shadanagar" id="pickup">
+                <input type="text" placeholder="Drop Location" id="drop">
+                
+                <select id="car-type">
+                    <option value="">Select Car</option>
+                    <option value="Swift Dzire">Swift Dzire</option>
+                    <option value="Hyundai i20">Hyundai i20</option>
+                    <option value="Swift">Swift</option>
+                    <option value="Ertiga">Ertiga</option>
+                </select>
+                
+                <button class="book-now-btn" onclick="bookNow()">Book Now on WhatsApp</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Shadanagar's most trusted car travel service</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-city"></i>
+                <h3>Local Rentals</h3>
+                <p>Shadanagar & Hyderabad city travel</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-road"></i>
+                <h3>Outstation Trips</h3>
+                <p>Long distance & weekend getaways</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-plane"></i>
+                <h3>Airport Transfers</h3>
+                <p>HYD pickup & drop services</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Corporate Travel</h3>
+                <p>Business meetings & events</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section - Only 4 Cars -->
+    <section id="fleet" class="fleet">
+        <div class="section-title">
+            <h2>Our Cars</h2>
+            <p>Choose from our well-maintained fleet</p>
+        </div>
+        <div class="fleet-grid">
+            <!-- Swift Dzire -->
+            <div class="car-card">
+                <div class="car-image">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="car-details">
+                    <h3>Swift Dzire</h3>
+                    <p><i class="fas fa-users"></i> 4+1 Seater</p>
+                    <p><i class="fas fa-calendar"></i> Model: 2023</p>
+                    
+                    <!-- Price Tag -->
+                    <div class="price-tag">
+                        <span class="main-price">₹1000 for 150 km</span><br>
+                        <span class="small-text">then ₹15 per km</span>
+                    </div>
+                    
+                    <div class="features">
+                        <span class="feature"><i class="fas fa-snowflake"></i> AC</span>
+                        <span class="feature"><i class="fas fa-music"></i> Music</span>
+                        <span class="feature"><i class="fas fa-battery"></i> Charging</span>
+                    </div>
+                    <button class="rent-btn" onclick="quickBook('Swift Dzire')">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Hyundai i20 -->
+            <div class="car-card">
+                <div class="car-image">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="car-details">
+                    <h3>Hyundai i20</h3>
+                    <p><i class="fas fa-users"></i> 4+1 Seater</p>
+                    <p><i class="fas fa-calendar"></i> Model: 2023</p>
+                    
+                    <!-- Price Tag -->
+                    <div class="price-tag">
+                        <span class="main-price">₹1000 for 150 km</span><br>
+                        <span class="small-text">then ₹15 per km</span>
+                    </div>
+                    
+                    <div class="features">
+                        <span class="feature"><i class="fas fa-snowflake"></i> AC</span>
+                        <span class="feature"><i class="fas fa-music"></i> Music</span>
+                        <span class="feature"><i class="fas fa-bluetooth"></i> Bluetooth</span>
+                    </div>
+                    <button class="rent-btn" onclick="quickBook('Hyundai i20')">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Swift -->
+            <div class="car-card">
+                <div class="car-image">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="car-details">
+                    <h3>Swift</h3>
+                    <p><i class="fas fa-users"></i> 4+1 Seater</p>
+                    <p><i class="fas fa-calendar"></i> Model: 2023</p>
+                    
+                    <!-- Price Tag -->
+                    <div class="price-tag">
+                        <span class="main-price">₹1000 for 150 km</span><br>
+                        <span class="small-text">then ₹15 per km</span>
+                    </div>
+                    
+                    <div class="features">
+                        <span class="feature"><i class="fas fa-snowflake"></i> AC</span>
+                        <span class="feature"><i class="fas fa-music"></i> Music</span>
+                        <span class="feature"><i class="fas fa-charging-station"></i> Charging</span>
+                    </div>
+                    <button class="rent-btn" onclick="quickBook('Swift')">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Ertiga -->
+            <div class="car-card">
+                <div class="car-image">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="car-details">
+                    <h3>Ertiga</h3>
+                    <p><i class="fas fa-users"></i> 6+1 Seater</p>
+                    <p><i class="fas fa-calendar"></i> Model: 2023</p>
+                    
+                    <!-- Price Tag -->
+                    <div class="price-tag">
+                        <span class="main-price">₹1000 for 150 km</span><br>
+                        <span class="small-text">then ₹15 per km</span>
+                    </div>
+                    
+                    <div class="features">
+                        <span class="feature"><i class="fas fa-snowflake"></i> AC</span>
+                        <span class="feature"><i class="fas fa-music"></i> Music</span>
+                        <span class="feature"><i class="fas fa-charging-station"></i> Charging</span>
+                    </div>
+                    <button class="rent-btn" onclick="quickBook('Ertiga')">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="section-title">
+            <h2>Why Choose Us?</h2>
+            <p>Your comfort and safety is our priority</p>
+        </div>
+        <div class="features-grid">
+            <div class="why-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Safe & Secure</h3>
+                <p>Experienced drivers, well-maintained cars</p>
+            </div>
+            <div class="why-card">
+                <i class="fas fa-clock"></i>
+                <h3>24/7 Service</h3>
+                <p>Available all days, anytime</p>
+            </div>
+            <div class="why-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Local Expertise</h3>
+                <p>Best routes in Shadanagar & Hyderabad</p>
+            </div>
+            <div class="why-card">
+                <i class="fas fa-smile"></i>
+                <h3>Clean Cars</h3>
+                <p>Hygienic and sanitized vehicles</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info-section">
+                <h3>Contact Srikanth</h3>
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><strong>Bhagyanagar Colony, Shadanagar</strong><br>Hyderabad, Telangana - 502319</p>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone-alt"></i>
+                    <p><strong>9640091779</strong> (Srikanth)</p>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-clock"></i>
+                    <p>Open 24/7 • All Days</p>
+                </div>
+                
+                <div class="business-hours">
+                    <h4>📍 Popular Routes:</h4>
+                    <p>• Shadanagar to Hyderabad Airport</p>
+                    <p>• Shadanagar to Mehdipatnam</p>
+                    <p>• Shadanagar to Srisailam</p>
+                    <p>• Shadanagar to Warangal</p>
+                </div>
+            </div>
+            
+            <div class="contact-info-section">
+                <h3>Location</h3>
+                <div class="map-container" onclick="openMap()">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p><strong>Bhagyanagar Colony</strong><br>Shadanagar, Hyderabad</p>
+                        <p style="font-size:0.8rem;">Click to open Google Maps</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 1rem;">
+                    <p><i class="fas fa-directions"></i> Near Bhagyanagar Colony Main Road</p>
+                    <p><i class="fas fa-bus"></i> 5 mins from Shadanagar Bus Stand</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <p>Srikanth Car Travels © 2024</p>
+        <p><i class="fas fa-map-marker-alt"></i> Bhagyanagar Colony, Shadanagar | <i class="fas fa-phone"></i> 9640091779</p>
+        <p><small>Special Rate: ₹1000   for first 150 km • ₹15/km after</small></p>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/919640091779?text=Hi%20Srikanth,%20I%20need%20a%20car" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:9640091779" class="call-float">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- Bottom Navigation for Mobile -->
+    <div class="bottom-nav">
+        <a href="#home" class="active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#services">
+            <i class="fas fa-tags"></i>
+            <span>Services</span>
+        </a>
+        <a href="#fleet">
+            <i class="fas fa-car"></i>
+            <span>Cars</span>
+        </a>
+        <a href="#contact">
+            <i class="fas fa-phone"></i>
+            <span>Contact</span>
+        </a>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2>Quick Booking</h2>
+            <div class="booking-form" style="padding: 0;">
+                <input type="text" placeholder="Your Name" id="modalName">
+                <input type="tel" placeholder="Phone Number" id="modalPhone">
+                
+                <div class="row">
+                    <div class="form-group">
+                        <input type="date" id="modalDate">
+                    </div>
+                    <div class="form-group">
+                        <input type="time" id="modalTime">
+                    </div>
+                </div>
+                
+                <input type="text" placeholder="From" id="modalPickup" value="Bhagyanagar Colony">
+                <input type="text" placeholder="To" id="modalDrop">
+                
+                <select id="modalCarType">
+                    <option value="">Select Car</option>
+                    <option value="Swift Dzire">Swift Dzire</option>
+                    <option value="Hyundai i20">Hyundai i20</option>
+                    <option value="Swift">Swift</option>
+                    <option value="Ertiga">Ertiga</option>
+                </select>
+                
+                <!-- Pricing Info in Modal -->
+                <div style="background: #f0f4ff; padding: 0.5rem; border-radius: 5px; margin: 0.5rem 0; text-align: center; font-size: 0.9rem;">
+                    <i class="fas fa-tag" style="color: #667eea;"></i> ₹1000 for first 150 km • ₹15/km after
+                </div>
+                
+                <button class="book-now-btn" onclick="confirmBooking()">Send Booking</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js">
+       
+    </script>
+</body>
+</html>

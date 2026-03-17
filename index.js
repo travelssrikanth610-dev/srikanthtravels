@@ -1,4 +1,4 @@
- function bookNow() {
+  function bookNow() {
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
             const date = document.getElementById('date').value;
@@ -21,7 +21,7 @@ Time: ${time}%0A
 From: ${pickup}%0A
 To: ${drop}%0A
 Car: ${carType}%0A
-%0A*Pricing:* ₹100 for first 150 km, then ₹15/km`;
+%0A*Pricing:* ₹1000 for first 150 km, then ₹8/km`;
 
             window.open(`https://wa.me/919640091779?text=${message}`, '_blank');
         }
@@ -58,7 +58,7 @@ Time: ${time}%0A
 From: ${pickup}%0A
 To: ${drop}%0A
 Car: ${carType}%0A
-%0A*Pricing:* ₹100 for first 150 km, then ₹15/km`;
+%0A*Pricing:* ₹1000 for first 150 km, then ₹8/km`;
 
             window.open(`https://wa.me/919640091779?text=${message}`, '_blank');
             closeModal();
@@ -68,7 +68,6 @@ Car: ${carType}%0A
             window.open('https://maps.google.com/?q=Bhagyanagar+Colony+Shadanagar+Hyderabad', '_blank');
         }
 
-        // Close modal when clicking outside
         window.onclick = function(event) {
             const modal = document.getElementById('bookingModal');
             if (event.target == modal) {
@@ -76,7 +75,6 @@ Car: ${carType}%0A
             }
         }
 
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -90,7 +88,6 @@ Car: ${carType}%0A
             });
         });
 
-        // Active link in bottom nav
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.bottom-nav a');
 
@@ -112,7 +109,6 @@ Car: ${carType}%0A
             });
         });
 
-        // Set minimum date to today
         const today = new Date().toISOString().split('T')[0];
         if(document.getElementById('date')) {
             document.getElementById('date').setAttribute('min', today);
